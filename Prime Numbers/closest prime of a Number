@@ -1,0 +1,25 @@
+#https://practice.geeksforgeeks.org/problems/find-the-closest-prime-number-to-a-given-number/0
+
+import math
+h=[False]*(1000004)
+def sieve():
+    for i in range(2,int(math.sqrt(1000004))+1):
+
+        if h[i] is False:
+            j = 2 * i
+            while j<1000004:
+                h[j]= True
+                j=j+i
+
+for _ in range(int(input())):   # test cases
+    n=int(input())
+    sieve()
+    l=r=n
+    while h[l]:
+        l-=1
+    while h[r]:
+        r+=1
+    if abs(n-l)>abs(n-r):
+        print(r)
+    else:
+        print(l)
