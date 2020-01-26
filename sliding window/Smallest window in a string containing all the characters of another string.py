@@ -42,7 +42,7 @@ def findSubString(string, pat):
 			
 				if (hash_str[ord(string[start])] > hash_pat[ord(string[start])]): 
         
-			    hash_str[ord(string[start])] -= 1
+			    		hash_str[ord(string[start])] -= 1
 				  start += 1
 			
 			
