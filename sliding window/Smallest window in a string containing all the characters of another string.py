@@ -1,6 +1,8 @@
 
 #https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0
 
+#example:  string:azjskfzts   pattern:zs   
+#example:  string:tttz   pattern:tz
 no_of_chars = 256
 def findSubString(string, pat): 
 
@@ -37,7 +39,7 @@ def findSubString(string, pat):
 		# if all the characters are matched 
 		if count == len2: 
 		
-			
+			#remove repaeted and unwanted
 			while (hash_str[ord(string[start])] > hash_pat[ord(string[start])] or hash_pat[ord(string[start])] == 0): 
 			
 				if (hash_str[ord(string[start])] > hash_pat[ord(string[start])]): 
